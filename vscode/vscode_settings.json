@@ -1,1 +1,81 @@
+//COPY THIS FILE INTO .config/Code/user/settings.json
 
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[java]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "prettier.tabWidth": 2,
+  "prettier.singleAttributePerLine": true,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.lineNumbers": "relative",
+  "git.openRepositoryInParentFolders": "always",
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "editor.renderLineHighlight": "gutter",
+  "editor.lightbulb.enabled": "off",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.cursorBlinking": "solid",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontLigatures": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "prettier.useTabs": true,
+  "breadcrumbs.enabled": false,
+  "apc.electron": {
+    "vibrancy": "ultra-dark",
+    "titleBarStyle": "hiddenInset"
+  },
+  "apc.activityBar": {
+    "position": "bottom",
+    "size": 50,
+    "itemSize": 40,
+    "itemMargin": 5
+  },
+  "apc.stylesheet": {
+    ".title-actions": "display:none !important",
+    ".monaco-workbench .monaco-list:not(.element-focused):focus:before": "outline: none !important"
+  },
+  "window.titleBarStyle": "custom",
+  "apc.font.family": "Dank Mono , monospace",
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.showTabs": "single",
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "material-icon-theme.hidesExplorerArrows": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.fontFamily": "Dank Mono , monospace",
+  "terminal.integrated.inheritEnv": true,
+  "git.decorations.enabled": false,
+}
