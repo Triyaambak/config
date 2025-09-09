@@ -27,7 +27,8 @@ return {
     },
 
     -- Allows extra capabilities provided by nvim-cmp
-    'hrsh7th/cmp-nvim-lsp',
+         'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
   },
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
@@ -188,15 +189,12 @@ return {
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
+    local lspconfig = require("lspconfig")
+
     for server, cfg in pairs(servers) do
-      -- For each LSP server (cfg), we merge:
-      -- 1. A fresh empty table (to avoid mutating capabilities globally)
-      -- 2. Your capabilities object with Neovim + cmp features
-      -- 3. Any server-specific cfg.capabilities if defined in `servers`
       cfg.capabilities = vim.tbl_deep_extend('force', {}, capabilities, cfg.capabilities or {})
 
-      vim.lsp.config(server, cfg)
-      vim.lsp.enable(server)
+      lspconfig[server].setup(cfg)
     end
-  end,
+end,
 }
