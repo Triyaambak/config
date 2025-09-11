@@ -27,7 +27,6 @@ return {
         },
 
         -- Allows extra capabilities provided by nvim-cmp
-        'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
@@ -114,6 +113,18 @@ return {
                     end, '[T]oggle Inlay [H]ints')
                 end
             end,
+        })
+
+        vim.diagnostic.config({
+            virtual_text = {
+                prefix = "●",  -- symbol
+                source = "if_many",
+                spacing = 4,
+            },
+            signs = true,
+            underline = true,
+            update_in_insert = false,
+            severity_sort = true,
         })
 
         -- LSP servers and clients are able to communicate to each other what features they support.
