@@ -7,8 +7,10 @@ local opts = { noremap = true, silent = true }
 -- Disable the spacebar key's default behavior in Normal and Visual modes
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
+-- Disable yanking when deleting any text initiated with key 'd'
+vim.keymap.set('n', 'd', '"_d', opts)
+vim.keymap.set('v', 'd', '"_d', opts)
+vim.keymap.set('o', 'd', '"_d', opts)
 
 -- Vertical scroll and center
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
@@ -59,27 +61,26 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set('v', 'p', '"_dP', opts)
 
 -- Diagnostic keymaps
+
+vim.diagnostic.config {
+ virtual_text = {
+  prefix = '●',
+  source = 'if_many',
+  spacing = 4,
+ },
+ signs = true,
+ underline = true,
+ update_in_insert = false,
+ severity_sort = true,
+}
+
 vim.keymap.set('n', '[d', function()
-  vim.diagnostic.jump { count = -1, float = true }
+ vim.diagnostic.jump { count = -1, float = true }
 end, { desc = 'Go to previous diagnostic message' })
 
 vim.keymap.set('n', ']d', function()
-  vim.diagnostic.jump { count = 1, float = true }
+ vim.diagnostic.jump { count = 1, float = true }
 end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
