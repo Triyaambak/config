@@ -115,18 +115,6 @@ return {
    end,
   })
 
-  vim.diagnostic.config {
-   virtual_text = {
-    prefix = '●', -- symbol
-    source = 'if_many',
-    spacing = 4,
-   },
-   signs = true,
-   underline = true,
-   update_in_insert = false,
-   severity_sort = true,
-  }
-
   -- LSP servers and clients are able to communicate to each other what features they support.
   -- By default, Neovim doesn't support everything that is in the LSP specification.
   -- When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
