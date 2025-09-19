@@ -12,6 +12,9 @@ vim.keymap.set('n', 'd', '"_d', opts)
 vim.keymap.set('v', 'd', '"_d', opts)
 vim.keymap.set('o', 'd', '"_d', opts)
 
+-- Due to the above three commands , dd does not work so to keep dd working
+vim.keymap.set('n', 'dd', 'dd', { noremap = true })
+
 -- Vertical scroll and center
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
