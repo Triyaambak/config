@@ -34,7 +34,7 @@ return {
    diagnostics.staticcheck,
    -- other utilities
    diagnostics.checkmake,
-   formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown' } },
+   formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'dockerfile' } },
    formatting.stylua,
    formatting.shfmt.with { args = { '-i', '4' } },
    require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I' } },

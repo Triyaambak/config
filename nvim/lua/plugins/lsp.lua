@@ -134,7 +134,17 @@ return {
    html = { filetypes = { 'html', 'twig', 'hbs' } },
    cssls = {},
    tailwindcss = {},
-   dockerls = {},
+   dockerls = {
+    filetypes = { 'dockerfile' },
+    settings = {
+     docker = {
+      languageserver = {
+       diagnostics = { enabled = true },
+       formatting = { enabled = false },
+      },
+     },
+    },
+   },
    sqlls = {},
    jsonls = {},
    yamlls = {},
